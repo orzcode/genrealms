@@ -1,0 +1,58 @@
+    <main class="shell">
+      <h1 class="title">CD-Key Story Game</h1>
+
+      <!-- LLM/story output area (initially your intro text).
+           This takes ~70% of the viewport height. -->
+      <section class="story-box" aria-live="polite">
+        <p>
+          Welcome, traveler. This area will display the story / LLM responses.
+          For now, put your intro or instructions here.
+        </p>
+      </section>
+
+      <!-- Input area (for now just a button; later swap to a text box). -->
+      <section class="input-area">
+        <button class="cs-btn" type="button">Begin</button>
+      </section>
+    </main>
+
+    <style>
+      /* Scoped layout styles that use your CSS variables */
+      .shell {
+        width: min(100%, 1000px);
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .title {
+        color: var(--accent);
+        font-size: 28px;
+        margin: 8px 0 12px;
+        text-align: center;
+      }
+
+      .story-box {
+        /* 70% of the page height, with your palette/borders */
+        height: 70vh;
+        padding: 12px;
+        background: var(--secondary-bg);
+        color: var(--text);
+        border: 1px solid;
+        border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+        overflow: auto;
+      }
+
+      .input-area {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 0;
+      }
+
+      /* Make it breathe a bit on larger screens */
+      @media (min-width: 768px) {
+        .shell { padding: 24px; }
+        .title { font-size: 32px; }
+        .story-box { padding: 16px; }
+      }
+    </style>

@@ -1,0 +1,78 @@
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+	
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+}
+html {
+  font-size: 62.5%;
+  /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  caret-color: transparent;
+}
+input, textarea, [contenteditable="true"] { caret-color: auto; }
+/* Auto color for editable areas. */
+
+body {
+  font-size: 2rem;
+  /* font-size: calc(1.5rem + 0.4vw); */
+  /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+  /* FONTSIZE - Adding the 0.4 is for responsivity */
+}
+button {
+  cursor: pointer;
+}
+
+/* ----------------------------------------- */
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  /*This is important for flex-based bottom footer*/
+}
+/* ----------------------------------------- */
+#header {
+  width: 100%;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  filter: drop-shadow(1px 1px 1px black);
+  font-size: clamp(3.3rem, 5vw, 4.5rem);
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#footer {
+  width: 100%;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.fa-brands {
+  color: var(--text); 
+}

@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import "../styles/steam.css";
+import "../styles/global.css";
+---
+
+<Layout title="Generated Realms">
+
+<div id="main">
+  <h1>Generated Realms</h1>
+  <p>A text-based adventure game shaped by your input</p>
+  <hr class="cs-hr" />
+
+  <p>Login with Steam or simply click Begin</p>
+  <button id="begin-btn" class="cs-btn cs-btn-primary">Begin</button>
+  <a href="#" class="steam-btn" aria-label="Sign in through Steam">
+  <img src="/src/assets/sits_01.png" alt="Sign in through Steam" />
+</a>
+</div>
+
+<!-- Layout file contains Footer component already -->
+</Layout>
+
+<style>
+hr {
+	width: 55vw;
+}
+</style>
