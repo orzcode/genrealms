@@ -15,4 +15,4 @@ app.use(express.static("dist/client"));
 // all other routes → Astro
 app.use(astroHandler);
 
-app.listen(3000, () => console.log("Server running on http://localhost:3000"));
+app.listen(4321, () => console.log("Server running on http://localhost:4321"));
